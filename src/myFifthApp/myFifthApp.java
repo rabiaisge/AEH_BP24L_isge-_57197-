@@ -82,7 +82,7 @@ public class myFifthApp {
     }
 }*/
 
-package pl.pp;
+package myFifthApp;
 
 public class myFifthApp {
     public static void main(String[] args) {
