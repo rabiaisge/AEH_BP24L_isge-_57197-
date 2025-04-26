@@ -1,53 +1,53 @@
 package pl.pp;
 
 public class Person {
-    // Fields (attributes) of the class defining the object "Person"
+    // Fields (attributes)
     public String forename;
     public String surname;
     public int age;
-    public String address; // NEW field: address
-    public int year_of_birth; // NEW field: year of birth
+    public String address;
+    public int year_of_birth;
 
     // Default constructor
     public Person() {
     }
 
-    // Constructor with three parameters
-    public Person(String initForename, String initSurname, int initAge) {
+    // Constructor with parameters
+    public Person(String initForename, String initSurname, int initAge, String initAddress, int initYearOfBirth) {
         forename = initForename;
         surname = initSurname;
         age = initAge;
+        address = initAddress;
+        year_of_birth = initYearOfBirth;
     }
 
-    // Class methods
-
-    // Print information about the person
+    // Method to introduce person
     public void hiToAll() {
-        System.out.println("My name is " + forename + " " + surname + ". " + "I am " + age + " years old.");
+        System.out.println("My name is " + forename + " " + surname + ". " +
+                "I am " + age + " years old. " +
+                "I live at " + address + ". " +
+                "I was born in " + year_of_birth + ".");
     }
 
-    // Method growOld, now takes a parameter to increase the age
-    public void growOld(int years) {
+    // Modified growOld method: increase age by given number
+    public int growOld(int years) {
         age = age + years;
+        return age;
     }
 
-    // Method to make the person younger by 1 year
-    public void beYounger() {
+    // New beYounger method: decrease age by 1
+    public int beYounger() {
         age = age - 1;
+        return age;
     }
 
-    // Method to get the forename
+    // Method to get forename
     public String getName() {
         return forename;
     }
 
-    // Method to set the forename
+    // Method to set forename
     public void setName(String nameToSet) {
         forename = nameToSet;
     }
-
-    public void growOld() {
-    }
 }
-
-
